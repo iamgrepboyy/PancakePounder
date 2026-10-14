@@ -24,7 +24,7 @@ cyan = "\033[36m"
 gold_rgb = "\033[38;2;243;164;53m"
 
 print(gold_rgb + "PancakePounder" + white)
-print("Made By WafflesExploits")
+print("Made By iamgrepboy")
 
 basic_example = f"""\n{cyan}[Usage Example]{white}\npython3 PancakePounder.py --host \"https://web-security-academy.net/login\" --data 'username=*USER*&password=*PASS*' -U 'users.txt' -P 'passwords.txt' --csrf-regex 'name=\"csrf\" value=\"(.*?)\">' --csrf-param 'csrf' --match-status '200-299,301,302'"""
 csrf_get_example = f"""\n{cyan}[Using CSRF URL Example]{white}\npython3 PancakePounder.py --host \"https://web-security-academy.net/login\" --data 'username=*USER*&password=*PASS*' -U 'users.txt' -P 'passwords.txt' --csrf-regex 'name=\"csrf\" value=\"(.*?)\">' --csrf-param 'csrf' --csrf-url 'https://web-security-academy.net/login' --match-status '200-299,301,302'"""
