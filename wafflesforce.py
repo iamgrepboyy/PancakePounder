@@ -22,14 +22,14 @@ cyan = "\033[36m"
 gold_rgb = "\033[38;2;243;164;53m"
 
 # Banner
-print(gold_rgb + "╦ ╦╔═╗╔═╗╔═╗╦  ╔═╗╔═╗╔═╗╔═╗╦═╗╔═╗╔═╗")
-print("║║║╠═╣╠╣ ╠╣ ║  ║╣ ╚═╗╠╣ ║ ║╠╦╝║  ║╣ ")
-print("╚╩╝╩ ╩╚  ╚  ╩═╝╚═╝╚═╝╚  ╚═╝╩╚═╚═╝╚═╝"+ white)
+print(gold_rgb + "PancakePounder" + white)
+print("Made By WafflesExploits")
+print(white)
 
-basic_example = f"""\n{cyan}[Usage Example]{white}\npython3 wafflesforce.py --host "https://web-security-academy.net/login" --data 'username=*USER*&password=*PASS*' -U 'users.txt' -P 'passwords.txt' -mr '/login2' -ms '200-299,301,302' --csrf-param 'csrf' --csrf-regex 'name="csrf" value="(.*?)">' --threads 5 --output results.txt\n"""
-csrf_get_example = f"""\n{cyan}[Using CSRF URL Example]{white}\npython3 wafflesforce.py --host "https://web-security-academy.net/login" --data 'username=*USER*&password=*PASS*' -U 'users.txt' -P 'passwords.txt' -mr '/login2' -ms '200-299,301,302' --csrf-param 'csrf' --csrf-regex 'name="csrf" value="(.*?)">' --threads 5 --csrf-url "https://web-security-academy.net/login" --output results.txt"""
+basic_example = f"""\n{cyan}[Usage Example]{white}\npython3 wafflesforce.py --host "https://web-security-academy.net/login" --data 'username=*USER*&password=*PASS*' -U 'users.txt' -P 'passwords.tx[...]"""
+csrf_get_example = f"""\n{cyan}[Using CSRF URL Example]{white}\npython3 wafflesforce.py --host "https://web-security-academy.net/login" --data 'username=*USER*&password=*PASS*' -U 'users.txt' -P '[...]"""
 
-parser = argparse.ArgumentParser(description='-> Multi-threaded Login Bruteforcer for Bypassing CSRF Token Protection\n ', formatter_class=argparse.RawTextHelpFormatter,epilog=(basic_example + "\n" + csrf_get_example))
+parser = argparse.ArgumentParser(description='-> Multi-threaded Login Bruteforcer for Bypassing CSRF Token Protection\n ', formatter_class=argparse.RawTextHelpFormatter,epilog=(basic_example + "\n[...]")
 parser.add_argument('--host', type=str, help="Target URL.")
 parser.add_argument('-U', '--users', type=str, nargs='?', help="Path to usernames\' wordlist file.")
 parser.add_argument('-u', '--user', type=str, nargs='?', help="Specify a single username to use")
@@ -161,15 +161,15 @@ def get_status_code(status_string):
 def get_stat_color(stat_code):
     color_code = ''
     if ( 200 <= stat_code < 299):
-        color_code = '\033[32m'
+        color_code = '\\033[32m'
     elif ( stat_code == 302):
-        color_code = '\033[32m'
+        color_code = '\\033[32m'
     elif ( 300 <= stat_code < 399):
-        color_code = '\033[34m'
+        color_code = '\\033[34m'
     elif ( 400 <= stat_code < 499):
-        color_code = '\033[33m'
+        color_code = '\\033[33m'
     elif ( 500 <= stat_code < 599):
-        color_code = '\033[31m'
+        color_code = '\\033[31m'
     
     colored_stat = color_code + str(stat_code) + white
     return colored_stat
@@ -285,7 +285,7 @@ StartTime = time.perf_counter()
 
 # Program Start
 print(f"{gold_rgb}[Starting]{white} {currentDate}")
-print(f"{cyan}[Settings]{white}\n {cyan}[URL]{white} - '{url}'\n {text_get_csrf_url()}\n {text_get_user()}\n {text_get_password()}\n {cyan}[Status Code]{white} - {args.match_status}\n {cyan}[Threads]{white} - {threads} ")
+print(f"{cyan}[Settings]{white}\n {cyan}[URL]{white} - '{url}'\n {text_get_csrf_url()}\n {text_get_user()}\n {text_get_password()}\n {cyan}[Status Code]{white} - {args.match_status}\n {cyan}[Thre[...]")
 if (output):
 	print(f" {cyan}[Output]{white} - '{output}'")
 start_attack()
